@@ -817,3 +817,6 @@ footer {
 .desktop{
   display: none;
 }
+body.no-js .time1 {
+  display: none;
+}

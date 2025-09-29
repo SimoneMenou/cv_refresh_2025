@@ -89,7 +89,7 @@
 /* Pour #article2 parcours - effet "hover" tactile sur mobile */
 #article2 #parcours li p {
   display: none; /* caché par défaut */
-  color: red;    /* ou la couleur que tu veux */
+  color: #873F49;    /* ou la couleur que tu veux */
   transition: all 0.3s ease;
 }
 
@@ -190,7 +190,7 @@
   padding: 1px;
   width: 20px;
   height: 20px;
-  background-color: red; /* couleur du switch (ou selon le thème via JS) */
+  background-color: #873F49; /* couleur du switch (ou selon le thème via JS) */
 }
 
 .switch .mode {
@@ -200,6 +200,24 @@
 }
 
 br{
-  color:red;
+  color:#873F49;
 }
+ /* On affiche tout le texte de parcours directement */
+  #article2 #parcours li p {
+    display: none;
+  }
+
+  /* Animation d’apparition douce en scroll */
+  #article2 #parcours li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  /* Quand l’élément est visible dans la viewport */
+  #article2 #parcours li.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 /*# sourceMappingURL=responsive_mobile.css.map */

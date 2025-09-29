@@ -20,10 +20,9 @@
 
   <title>MENEN SZYMON | Développeuse Fullstack Junior</title>
 </head>
-<!-- Flèche scroll (mobile uniquement) -->
-<div class="scroll-down">⬇</div>
 
-<body id="dark">
+
+<body id="dark" class="no-js">
   <div class="container">
 
     <!-- HEADER -->
@@ -187,7 +186,17 @@
         track.dataset.duplicated = 'true';
       }
     })();
-  </script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('#article2 #parcours li').forEach(el => observer.observe(el));
+  </script> 
+  <script>document.body.classList.remove('no-js'); </script>
 </body>
 
 </html>
